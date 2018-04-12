@@ -1,0 +1,56 @@
+<div class='registration' layout='row' layout-align='center center' >
+  <md-whiteframe class="md-whiteframe-4dp login-panel" flex-sm='50' flex-gt-sm='40' layout='column'>
+    <h2 class='registration-heading'>Registration Form</h2>
+    <md-input-container>
+      <label>Name</label>
+      <md-icon md-svg-src="bower_components/material-design-icons/action/svg/production/ic_account_circle_24px.svg" class="name"></md-icon>
+      <input type="text" ng-model='user.name'>
+    </md-input-container>
+    <md-input-container>
+      <label>Address</label>
+      <md-icon md-svg-src="bower_components/material-design-icons/maps/svg/production/ic_place_24px.svg" class="name"></md-icon>
+      <input type="text" ng-model='user.address'>
+    </md-input-container>
+    <md-input-container>
+      <label>Description</label>
+      <md-icon md-svg-src="bower_components/material-design-icons/action/svg/production/ic_assignment_24px.svg" class="name"></md-icon>
+      <input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">
+      <div ng-messages="projectForm.description.$error">
+        <div ng-message="required">This is required.</div>
+        <div ng-message="md-maxlength">The description must be less than 30 characters long.</div>
+      </div>
+    </md-input-container>
+    <md-radio-group ng-model="data.group1">
+      <div flex layout="row" layout-align="space-around center">
+        <div style="margin-bottom:16px;">Gender </div>
+        <md-radio-button value="male">Male</md-radio-button>
+        <md-radio-button value="female"> Female </md-radio-button>
+      </div>
+
+    </md-radio-group>
+    <md-switch aria-label="Switch 1">
+      Accept Terms & Conditions.
+    </md-switch>
+    <md-button class="md-raised md-accent">Register</md-button>
+  </md-whiteframe>
+  <!-- <md-fab-speed-dial md-open="registrationCtrl.isOpen" md-direction="right"
+                         ng-class="md-scale" >
+        <md-fab-trigger>
+          <md-button aria-label="menu" class="md-fab md-warn">
+            <md-icon md-svg-src="bower_components/material-design-icons/navigation/svg/production/ic_menu_24px.svg"></md-icon>
+          </md-button>
+        </md-fab-trigger>
+
+        <md-fab-actions>
+          <md-button aria-label="a" class="md-fab md-raised md-mini">
+            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/production/ic_backup_24px.svg" aria-label="Twitter"></md-icon>
+          </md-button>
+          <md-button aria-label="b" class="md-fab md-raised md-mini">
+            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/production/ic_dashboard_24px.svg" aria-label="Facebook"></md-icon>
+          </md-button>
+          <md-button aria-label="c" class="md-fab md-raised md-mini">
+            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/production/ic_language_24px.svg" aria-label="Google Hangout"></md-icon>
+          </md-button>
+        </md-fab-actions>
+      </md-fab-speed-dial> -->
+</div>
